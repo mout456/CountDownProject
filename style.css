@@ -1,0 +1,178 @@
+/* =========================
+   General
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+   Start Countdown Page
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 500px;
+}
+
+form {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    border: none;
+    text-align: center;
+}
+
+legend {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+input[type="datetime-local"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"] {
+    background: #667eea;
+    color: white;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background: #5568d8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   Countdown Page
+========================= */
+
+body:has(#days) {
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+body:has(#days) > div {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+body:has(#days) > div span {
+    background: white;
+    color: #333;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 25px 20px;
+    border-radius: 12px;
+    min-width: 110px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   Reset and Back Buttons
+========================= */
+
+#reset,
+#back {
+    margin-top: 35px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background: white;
+    color: #555;
+}
+
+#reset:hover,
+#back:hover {
+    background: #eee;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    body:has(#days) > div {
+        gap: 8px;
+    }
+
+    body:has(#days) > div span {
+        font-size: 28px;
+        padding: 18px 12px;
+        min-width: 80px;
+    }
+
+    form {
+        padding: 25px;
+    }
+
+    legend {
+        font-size: 26px;
+    }
+}
